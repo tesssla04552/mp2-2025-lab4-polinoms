@@ -1,8 +1,8 @@
 #include "../include/polynomial.h"
 #include <algorithm>
-#include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <iostream>
 #include <regex>
 #include <sstream>
 

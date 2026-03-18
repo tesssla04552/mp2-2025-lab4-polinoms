@@ -1,9 +1,8 @@
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
-#include <iostream>
-#include <vector>
-#include <string>
 #include <cmath>
+#include <string>
+#include <vector>
 struct Monom {
   double koefficient;
   int degree;
@@ -25,12 +24,13 @@ private:
   Node *head;
   int count;
   void clear();
-  void copyFrom(const Polynomials& other);
-  void insertSorted(const Monom& other);
+  void copyFrom(const Polynomials &other);
+  void insertSorted(const Monom &other);
   void removeZeros();
+
 public:
   Polynomials();
-  Polynomials(const Polynomials& other);
+  Polynomials(const Polynomials &other);
   ~Polynomials();
   Polynomials &operator=(const Polynomials &other);
   Polynomials operator+(const Polynomials &other) const;
@@ -45,4 +45,4 @@ public:
   std::vector<Monom> getMonoms() const;
 };
 
-#endif //
+#endif

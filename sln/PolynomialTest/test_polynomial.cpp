@@ -1,5 +1,5 @@
-#include "pch.h"
 #include "../../include/polynomial.h"
+#include "pch.h"
 
 TEST(PolynomialTest, test_default_constructor_creates_empty_polynomial) {
   Polynomials p;
@@ -121,10 +121,10 @@ TEST(PolynomialTest, test_addition_coefficient_Y) {
   bool foundY = false;
   for (const auto &m : monoms) {
     if (m.degree == 10) {
-	  EXPECT_NEAR(m.koefficient, 2.0, 1e-10);
-	  foundY = true;
-	break;
-	}
+      EXPECT_NEAR(m.koefficient, 2.0, 1e-10);
+      foundY = true;
+      break;
+    }
   }
   EXPECT_TRUE(foundY);
 }
@@ -315,8 +315,8 @@ TEST(PolynomialTest, test_Remove_zeros_addition_X_Disappears) {
   bool foundX = false;
   for (const auto &m : monoms) {
     if (m.degree == 100) {
-	  foundX = true;
-	}
+      foundX = true;
+    }
   }
   EXPECT_FALSE(foundX);
 }
@@ -369,8 +369,8 @@ TEST(PolynomialTest, test_zero_degree_constant) {
   bool foundConstant = false;
   for (const auto &m : monoms) {
     if (m.degree == 0) {
-	  foundConstant = true;
-	}
+      foundConstant = true;
+    }
   }
   EXPECT_TRUE(foundConstant);
 }
